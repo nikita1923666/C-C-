@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-
-int strlen(char *str) {
-    int count = 0;
-    while (str[count] != '\0')
-        count++;
-    return count;
-}
+#include "reverse.h"
 
 
 int main1() {
@@ -33,7 +27,7 @@ int main1() {
     printf("Enter line:");
     scanf("%s", buffer);
 
-    int len = strlen(buffer);
+    int len = length(buffer);
 
     printf("Length of string you entered is: %d\n", len);
     char a[100];
@@ -52,9 +46,10 @@ int main1() {
 //        a[i] = buffer[i];
 //    }
     printf("Buffer= %s\n", buffer);
-    printf("a= %s\n", a);
 
     if (len < 20) {
         printf("short\n");
     }
 }
+
+
